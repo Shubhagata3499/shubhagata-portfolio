@@ -1,0 +1,726 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: rgb(29, 206, 19);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+.navbar {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0.8rem 1.2rem;
+  
+  
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  color: #00ff88;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #000;
+  background-color: #00ff88;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth; /* ✅ smooth scroll between pages */
+}
+
+body {
+  background-color: rgba(16, 15, 15, 0.388);
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 100px;
+  overflow: hidden;
+}
+
+h1 span {
+  display: inline-block;
+}
+
+#move {
+  background-color: lawngreen;
+  display: flex;
+  padding: 2vw 0;
+  overflow: hidden;
+  width: 500%; /* Keeps width consistent during animation */
+}
+
+.marque {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+  padding: 0 1.5vw;
+}
+
+.marque h1 {
+  font-size: 40px;
+  color: black;
+}
+
+.marque img {
+  height: 5vw;
+}
+#page1,#page2{
+  background-color: #000;
+}
+
+
+/* Page 3 modern portfolio styles */
+/* Page 3 cyberpunk-themed fullscreen portfolio */
+#page3 {
+  min-height: 100vh;
+  width: 100vw;
+  background:black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5vw;
+  box-sizing: border-box;
+  color: #00ff88;
+}
+
+.portfolio-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 6rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;  /* Full viewport height */
+  /* Remove max-width to use full width */
+  /* max-width: 1200px; */
+  flex-wrap: nowrap;
+}
+
+.portfolio-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;  /* <-- Added this line to vertically center the image */
+  height: 100%;
+}
+
+.profile-banner {
+  width: 50%;     /* smaller width */
+  max-width: 400px;    /* smaller max-width */
+  max-height: 70vh;
+  border-radius: 10px;
+  filter: drop-shadow(0 0 10px #44b02400);
+  background-color: transparent;
+  object-fit: contain;
+}
+
+.portfolio-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: none;
+  height: 100%;
+  justify-content: center;
+  padding-right: 5vw;
+}
+
+.portfolio-right h2 {
+  font-size: 4.5rem; /* bigger font */
+  color: #00ff88;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.portfolio-right h4 {
+  font-size: 2.5rem;
+  color: #77ffcc;
+  font-weight: 600;
+  margin: 0;
+}
+
+.intro {
+  font-size: 1.5rem;
+  color: #baffd9;
+  line-height: 1.7;
+  max-width: 650px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+  max-width: 650px;
+}
+
+.info-item h5 {
+  font-size: 1.2rem;
+  color: #00ff88;
+  margin-bottom: 0.4rem;
+}
+
+.info-item p {
+  color: #d1ffe5;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+
+
+/* Responsive tweak */
+@media (max-width: 900px) {
+  .portfolio-wrapper {
+    flex-direction: column;
+    height: auto;
+    padding: 3rem 0;
+  }
+  .portfolio-left, .portfolio-right {
+    width: 100%;
+    max-width: 100%;
+  }
+  .profile-banner {
+    width: 70%;
+    max-width: none;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+  .portfolio-right h2 {
+    font-size: 3rem;
+  }}
+  #contact {
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5vw;
+  color: #00ff88;
+}
+
+.contact-wrapper {
+  text-align: center;
+  max-width: 900px;
+  width: 100%;
+}
+
+.contact-heading {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  color: #00ff88;
+}
+
+.contact-subheading {
+  font-size: 1.5rem;
+  color: #baffd9;
+  margin-bottom: 3rem;
+}
+
+.contact-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  background-color: #001d13;
+  border: 2px solid #00ff88;
+  padding: 20px 30px;
+  border-radius: 12px;
+  color: #00ff88;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px #00ff88;
+  font-size: 1.2rem;
+}
+
+.contact-item i {
+  font-size: 2rem;
+}
+
+.contact-item:hover {
+  background: #00ff88;
+  color: #000;
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #00ff88;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .contact-heading {
+    font-size: 3rem;
+  }
+
+  .contact-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-item {
+    width: 80%;
+  }
+}
+#projects {
+  min-height: 100vh;
+  width: 100vw;
+  background: radial-gradient(circle at center, #000000, #030d03);
+  padding: 5vh 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #00ff88;
+  flex-direction: column;
+  text-align: center;
+}
+
+.projects-wrapper {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.projects-heading {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.projects-subheading {
+  font-size: 1.5rem;
+  color: #baffd9;
+  margin-bottom: 3rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  width: 100%;
+}
+
+.project-card {
+  background: #001d13;
+  border: 2px solid #00ff88;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 0 15px #00ff88;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #00ff88;
+}
+
+.project-card img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  font-size: 1.1rem;
+  color: #aaffcc;
+  margin-bottom: 1rem;
+}
+
+.project-card a {
+  text-decoration: none;
+  color: #000;
+  background: #00ff88;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px #00ff88;
+}
+
+.project-card a:hover {
+  background: black;
+  color: #00ff88;
+}
+
+
+
+/*footer*/
+footer {
+  background-color: #0a0a0a;
+  color: #00ff88;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 1rem;
+  border-top: 1px solid #00ff88f0;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.footer-icons a {
+  transition: transform 0.3s ease;
+}
+
+.footer-icons svg {
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 0 4px #00ff8883);
+}
+
+.footer-icons svg:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 8px #00ff887f);
+}
+/* Adjusted Spline scene placement and size */
+#page1 {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; /* Changed from column to row */
+  gap: 3rem;            /* Adds spacing between spline and h1 */
+  padding: 5vh 5vw;
+}
+
+.page1-content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+}
+
+.spline-background {
+  position: relative;
+  height: 800px;
+  width: 800px;
+  z-index: 1;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.spline-background spline-viewer {
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+/* Base styles (your original styles kept unchanged for desktop) */
+
+/* === Your original CSS from above ... keep as is === */
+
+/* ---------------- MOBILE OPTIMIZATION ----------------- */
+
+/* Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    top: 10px;
+    right: 15px;
+    padding: 0.5rem 0.8rem;
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navbar a {
+    font-size: 1rem;
+  }
+}
+
+/* Page 1 (Spline + Content) */
+@media (max-width: 900px) {
+  #page1 {
+    flex-direction: column;
+    padding: 3vh 3vw;
+    gap: 2rem;
+    height: auto;
+  }
+
+  .spline-background {
+    width: 90vw;
+    height: auto;
+    max-height: 60vh;
+  }
+
+  .spline-background spline-viewer {
+    width: 100%;
+    height: 100%;
+  }
+
+  .page1-content {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+/* Page 2 and page 3 (portfolio and other content sections) */
+@media (max-width: 900px) {
+  #page2, #page3 {
+    padding: 3vh 3vw;
+  }
+
+  .portfolio-wrapper {
+    flex-direction: column;
+    height: auto;
+    padding: 3rem 0;
+  }
+
+  .portfolio-left, .portfolio-right {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .profile-banner {
+    width: 70%;
+    max-width: none;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+
+  .portfolio-right h2 {
+    font-size: 3rem;
+  }
+
+  .portfolio-right h4 {
+    font-size: 1.8rem;
+  }
+
+  .intro {
+    font-size: 1.3rem;
+    max-width: 100%;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 100%;
+  }
+}
+
+/* Projects Section */
+@media (max-width: 900px) {
+  #projects {
+    padding: 5vh 3vw;
+  }
+
+  .projects-heading {
+    font-size: 3rem;
+  }
+
+  .projects-subheading {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-card p {
+    font-size: 1rem;
+  }
+
+  .project-card a {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+}
+
+/* Contact Section */
+@media (max-width: 768px) {
+  #contact {
+    padding: 3vh 3vw;
+    height: auto;
+  }
+
+  .contact-heading {
+    font-size: 3rem;
+  }
+
+  .contact-subheading {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-item {
+    width: 80%;
+  }
+}
+
+/* Footer */
+@media (max-width: 600px) {
+  footer {
+    font-size: 0.9rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .footer-icons {
+    gap: 1rem;
+  }
+
+  .footer-icons svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Headings and text scaling globally on small devices */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  .intro {
+    font-size: 1.1rem;
+  }
+}
+
+/* Preloader Styles */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000; /* dark futuristic */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+.globe-container {
+  text-align: center;
+  color: #00ff88;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+
+.globe {
+  width: 200px;
+  height: 200px;
+  animation: spin 2s linear infinite;
+  filter: drop-shadow(0 0 10px #00ff88);
+  border-radius: 50%;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Transition Overlay */
+#transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9998;
+  display: flex;
+  pointer-events: none;
+}
+
+.panel {
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, #000000, #0f0f0f);
+  transition: transform 0.6s ease; /* shorter transition */
+}
+
+.left-panel {
+  transform: translateX(0);
+  border-right: 1px solid #00ff88;
+}
+
+.right-panel {
+  transform: translateX(0);
+  border-left: 1px solid #00ff88;
+}
+
+/* When transition starts */
+#transition-overlay.open .left-panel {
+  transform: translateX(-100%);
+}
+
+#transition-overlay.open .right-panel {
+  transform: translateX(100%);
+}
+
